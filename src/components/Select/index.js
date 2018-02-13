@@ -6,7 +6,7 @@ import Out from '../Out';
 
 import styles from './styles';
 
-export const Option = props => props.children;
+export { default as Option } from './Option';
 
 export default class Select extends React.Component {
   static propTypes = {
@@ -25,7 +25,7 @@ export default class Select extends React.Component {
     }
 
     this.head = this.props.head;
-    this.options = children.filter(elem => elem.type.name === 'Option');
+    this.options = children.filter(({ type }) => type.displayName === 'Option');
 
     this.children = this.options
       .filter(elem => elem.props.selected)[0]

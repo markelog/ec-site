@@ -1,8 +1,12 @@
 module.exports = {
   siteMetadata: {
-    title: 'Eclectic version manager for any language',
+    title: 'Eclectic language version manager',
   },
+
+  pathPrefix: '/staging/',
+
   plugins: [
+    'gatsby-plugin-styled-components',
     'gatsby-plugin-react-helmet',
 
     {

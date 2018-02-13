@@ -7,6 +7,7 @@ export default {
 
   sub: {
     margin: '0 auto',
-    maxWidth: width,
+    minWidth: width,
+    width: '80%'
   }
 };

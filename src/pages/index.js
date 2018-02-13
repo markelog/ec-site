@@ -22,9 +22,9 @@ const styles = {
 const IndexPage = () => (
   <div style={styles.container}>
     <Body>
-      <Content>
+      <Content id="main">
         <p>
-          Eclectica unifies managment of any
+          Eclectica unifies management of any
           language under one cohesive and minimalistic interface.<br />
         </p>
 
@@ -37,7 +37,12 @@ const IndexPage = () => (
         </p>
       </Content>
 
-      <Content>
+      <Content id="install">
+        <H1>Install</H1>
+        <Install />
+      </Content>
+
+      <Content id="overview">
         <H1>Overview</H1>
         <Terminal style={styles.terminal}>
           <Command input="ec --help" delay={200}>
@@ -59,11 +64,6 @@ Global Flags:
             </Output>
           </Command>
         </Terminal>
-      </Content>
-
-      <Content id="install">
-        <H1>Install</H1>
-        <Install />
       </Content>
     </Body>
   </div>

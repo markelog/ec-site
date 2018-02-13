@@ -8,11 +8,7 @@ import Spinner from '../Spinner';
 
 import styles from './styles';
 
-export const Output = props => (<div>{props.children}</div>);
-
-Output.propTypes = {
-  children: PropTypes.node
-};
+export { default as Output } from './Output';
 
 export default class Command extends React.Component {
   static propTypes = {
@@ -40,18 +36,11 @@ export default class Command extends React.Component {
       });
     };
 
-    this.spinner = props.spinner || false;
     this.input = props.input;
-
+    this.spinner = props.spinner || false;
     this.timeout = props.timeout || 0;
-
-    this.output = children.filter((elem) => {
-      return elem.type.name === 'Output';
-    });
-
-    this.children = children.filter((elem) => {
-      return elem.type.name !== 'Output';
-    });
+    this.output = children.filter(({ type }) => type.displayName === 'Output');
+    this.children = children.filter(({ type }) => type.displayName !== 'Output');
 
     if (children.length === 0) {
       this.state = {
@@ -107,18 +96,17 @@ export default class Command extends React.Component {
   }
 
   renderMain() {
-    if (this.state.ready === false) {
+    const { done, ready, typingDone } = this.state;
+
+    if (ready === false) {
       return <div />;
     }
 
     const Caret = styled.span`${styles.caret}`;
-
-    const { done } = this.state;
-    const { typingDone } = this.state;
-    const finished = typingDone && done === false;
     const caret = (<Caret>█</Caret>);
 
     const { output, children } = this.getDescendants();
+    const finished = typingDone && done === false;
 
     const br = () => {
 

@@ -4,25 +4,27 @@ import styled from 'styled-components';
 
 import Octocat from '../Octocat';
 
-import logo from './tmp5.png';
+import logo from './logo.svg';
 import styles from './styles';
 
 const Header = styled.span`${styles.sub}`;
+const Img = styled.img`${styles.logo}`;
+const Ec = styled(Link)`${styles.link}`;
 
 export default () => (
   <div style={styles.container}>
     <Octocat />
 
-    <Link to="#install" style={styles.install}>
+    {/* <Link to="/#install" style={styles.install}>
       install
-    </Link>
+    </Link> */}
 
-    <Link to="#navigation" style={styles.link}>
-      <img src={logo} style={styles.logo} alt="eclectica" />
-    </Link>
+    <Ec to="/#main">
+      <Img src={logo} alt="eclectica" />
+    </Ec>
 
     <Header>
-      version manager for any language
+      language version manager
     </Header>
   </div>
 );

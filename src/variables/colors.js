@@ -6,5 +6,3 @@ export const yellow = '#f6a704';
 export const white = 'white';
 
 export const primary = '#ed6a47';
-
-export const secondary = grey;

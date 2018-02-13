@@ -3,10 +3,12 @@ import { width } from '../../variables/dimensions';
 
 export default {
   container: {
+    position: 'relative',
     background: yellow,
     minWidth: width,
     flexDirection: 'column',
     height: '100vh',
+    minHeight: 500,
   },
 
   sub: {

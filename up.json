@@ -1,0 +1,8 @@
+{
+  "name": "eclectica",
+  "type": "static",
+  "static": {
+    "dir": "public"
+  },
+  "regions": ["eu-west-2"]
+}

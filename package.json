@@ -1,8 +1,17 @@
 {
-  "name": "gatsby-starter-default",
-  "description": "Gatsby default starter",
-  "version": "1.0.0",
+  "name": "ec-site",
+  "description": "Eclecatica site",
+  "private": true,
   "author": "Oleg Gaidarenko <markelog@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "npm run develop",
+    "build": "gatsby build --prefix-paths",
+    "develop": "gatsby develop",
+    "deploy": "npm run build && up && open $(up url)",
+    "lint": "eslint .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "dependencies": {
     "anchorate": "^1.1.0",
     "gatsby": "^1.9.145",
@@ -10,30 +19,16 @@
     "gatsby-link": "^1.6.32",
     "gatsby-plugin-react-helmet": "^1.0.8",
     "gatsby-plugin-sharp": "^1.6.24",
+    "gatsby-plugin-styled-components": "^2.0.5",
     "gatsby-source-filesystem": "^1.5.11",
     "gatsby-transformer-sharp": "^1.6.16",
     "material-ui": "^1.0.0-beta.33",
     "normalize.css": "^7.0.0",
     "react": "^15.6.2",
-    "react-transition-group": "^2.2.1",
     "react-typist": "^2.0.4",
     "react-visibility-sensor": "^3.11.0",
     "styled-components": "^2.4.0",
-    "typeface-roboto": "0.0.54",
-    "typography": "^0.16.6",
-    "typography-theme-elk-glen": "^0.16.9"
-  },
-  "keywords": [
-    "gatsby"
-  ],
-  "license": "MIT",
-  "main": "n/a",
-  "scripts": {
-    "start": "npm run develop",
-    "build": "gatsby build",
-    "develop": "gatsby develop",
-    "lint": "eslint .",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "typeface-roboto": "0.0.54"
   },
   "devDependencies": {
     "babel-plugin-transform-class-properties": "^6.24.1",
@@ -41,8 +36,6 @@
     "eslint-config-sexy": "^3.2.0",
     "gatsby-plugin-favicon": "^2.1.1",
     "gatsby-plugin-jss": "^1.5.9",
-    "prettier": "^1.9.2",
-    "react-console-component": "^0.6.1",
-    "why-did-you-update": "^0.1.0"
+    "react-console-component": "^0.6.1"
   }
 }
