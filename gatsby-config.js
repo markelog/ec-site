@@ -1,9 +1,9 @@
-module.exports = {
+const isProduction = process.env.NODE_ENV === 'production';
+
+const config = {
   siteMetadata: {
     title: 'Eclectic language version manager',
   },
-
-  pathPrefix: '/staging/',
 
   plugins: [
     'gatsby-plugin-styled-components',
@@ -28,6 +28,17 @@ module.exports = {
       }
     },
 
+    {
+      resolve: 'gatsby-plugin-google-analytics',
+      options: {
+        trackingId: 'UA-114040943-1',
+        // Puts tracking script in the head instead of the body
+        head: false,
+        // Setting this parameter is optional
+        anonymize: false,
+      },
+    },
+
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
     {
@@ -39,3 +50,9 @@ module.exports = {
     }
   ],
 };
+
+if (isProduction) {
+  config.pathPrefix = '/staging/';
+}
+
+module.exports = config;
