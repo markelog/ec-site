@@ -49,15 +49,31 @@ const IndexPage = () => (
             <Output>
               <Pre>{
 `Usage:
-  ec [&lt;language&gt;@&lt;version&gt;] [flags]
+  ec [command] [flags] [&lt;language&gt;@&gt;&lt;version&gt;]
+
+Examples:
+  Install specifc version
+  $ ec node@6.4.0
+
+  Choose local version with interactive list
+  $ ec go
+
+  Choose remote version with interactive list
+  $ ec -r rust
+
+Available Commands:
+  ls                list installed language versions
+  remove-everything removes everything related to the eclectica
+  rm                remove language version
+  version           print version of Eclectica
 
 Flags:
-  -h, --help   help for install
+  -h, --help           help for ec
+  -l, --local          install to the current folder only
+  -r, --remote         ask for remote versions
+  -w, --with-modules   reinstall global modules from the previous version (currently works only for node.js)
 
-Global Flags:
-  -l, --local          Install as local version i.e. language will be installed only to local folder
-  -r, --remote         Get remote versions
-  -w, --with-modules   Reinstall global modules from the previous version (currently works only for node.js)
+Use "ec [command] --help" for more information about a command
 `
 }
               </Pre>
