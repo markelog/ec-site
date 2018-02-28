@@ -10,10 +10,11 @@ export default {
 
   paper: {
     wordBreak: 'break-word',
+		letterSpacing: 0.5,
+		lineHeight: '24px',
     background: code,
     padding: 20,
     fontSize: 18,
-    letterSpacing: 0.5,
   },
 
   highlight: {
