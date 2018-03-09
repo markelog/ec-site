@@ -4,5 +4,8 @@
   "static": {
     "dir": "public"
   },
+	"error_pages": {
+    "dir": "public"
+  },
   "regions": ["eu-west-2"]
 }

@@ -1,10 +1,35 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-const NotFoundPage = () => (
-  <div>
-    <h1>NOT FOUND</h1>
-    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
-  </div>
-);
+import Terminal from '../components/Terminal';
+import Command, { Output } from '../components/Command';
 
-export default NotFoundPage;
+class NotFound extends Component {
+	constructor(props) {
+    super(props);
+    this.parent = null;
+  }
+
+	componentDidMount() {
+		setTimeout(() => {
+			this.parent.focus();
+		}, 100)
+	}
+
+	render() {
+		const input = this.props.location.pathname.split('/').join(' ');
+
+	  return (
+			<div tabIndex="-1"
+				style={{float: 'left', width: '100%', outlineWidth: 0}}
+				ref={(parent) => { this.parent = parent; }} >
+				<Terminal>
+			    <Command input={input} delay={200}>
+			      <Output>-bash: {input}: command not found</Output>
+			    </Command>
+			  </Terminal>
+			</div>
+		)
+	}
+}
+
+export default NotFound;

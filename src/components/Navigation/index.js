@@ -13,7 +13,7 @@ const Ul = styled.ul`${styles.ul}`;
 const isActive = (path, _, pathObject) => pathObject.pathname.includes(path);
 
 const Navigation = () => (
-  <Ul id="navigation">
+  <Ul id="navigation" tabIndex="-1">
     <li style={styles.li}>
       <NavLink style={styles.a} activeStyle={styles.active} isActive={isActive.bind(null, '/node/')} to="/node/#navigation">
         Node.js

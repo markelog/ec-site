@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import styles from './styles';
 
 const Terminal = props => (
-  <div style={{ ...styles.window, ...props.style }}>
+  <div style={{ ...styles.window, ...props.style }} {...props}>
     <div style={styles.header}>
       <span style={styles.close} />
       <span style={styles.minimize} />

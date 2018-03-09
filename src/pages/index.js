@@ -22,7 +22,7 @@ const styles = {
 const IndexPage = () => (
   <div style={styles.container}>
     <Body>
-      <Content id="main">
+      <Content>
         <p>
           Eclectica unifies management of any
           language under one cohesive and minimalistic interface.<br />
