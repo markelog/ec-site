@@ -24,7 +24,7 @@ export default () => (
     </Ec>
 
     <Header>
-      language version manager
+      version manager for any language
     </Header>
   </div>
 );

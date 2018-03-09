@@ -20,7 +20,7 @@ class NotFound extends Component {
 
 	  return (
 			<div tabIndex="-1"
-				style={{float: 'left', width: '100%', outlineWidth: 0}}
+				style={{float: 'left', width: '100%'}}
 				ref={(parent) => { this.parent = parent; }} >
 				<Terminal>
 			    <Command input={input} delay={200}>
