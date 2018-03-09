@@ -9,24 +9,26 @@ const Elm = () => (
   <Terminal>
     <Command input="elm --version" delay={200}>
       <Output>-bash: elm: command not found</Output>
-      <Command input="ec -r elm" spinner timeout={300}>
+      <Command input="ec elm@latest" spinner timeout={300}>
         <Output>
-          <Out head="Language" text="elm" />
-          <Out head="Version" text="0.18.0" />
+					<br/>
+          <Out head="language:" text="elm" />
+          <Out indent="1" head="version:" text="0.18.0" />
         </Output>
         <Command input="elm --version">
           <Output>0.18.0</Output>
-          <Command input="ec elm@latest" spinner timeout={1000}>
+          <Command input="ec -r elm" spinner timeout={1000}>
             <Output>
-              <Out head="Language" text="elm" />
-              <Select head="Mask">
+							<br/>
+              <Out head="language:" text="elm" />
+              <Select indent="4" head="mask:">
                <Option value="0.18.x" />
                <Option value="0.17.x" />
                <Option value="0.16.x" selected>
-                 <Out head="Mask" text="0.16.x" />
-                 <Select head="Version">
+                 <Out indent="4" head="mask:" text="0.16.x" />
+                 <Select indent="1" head="version:">
                   <Option value="0.16.0" selected>
-                    <Out head="Version" text="0.16.0" />
+                    <Out indent="1" head="version:" text="0.16.0" />
                     <Output>
                       <Command input="elm | grep Platform">
                         <Output>Elm Platform 0.16.0 - a way to run all Elm tools</Output>

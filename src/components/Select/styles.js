@@ -10,7 +10,7 @@ const styles = {
     lineHeight: '18px',
     fontSize: '14px',
     padding: 0,
-    margin: '0 0 0 20px',
+    margin: 0,
   },
 
   li: {
@@ -22,11 +22,6 @@ const styles = {
   active: {
     color: cyan
   },
-
-  pointer: {
-    position: 'absolute',
-    left: '-15px',
-  }
 };
 
 export default styles;

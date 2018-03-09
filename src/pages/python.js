@@ -11,24 +11,26 @@ const Python = () => (
       <Output>-bash: python: command not found</Output>
       <Command input="ec python@latest" spinner timeout={1000}>
         <Output>
-          <Out head="Language" text="python" />
-          <Out head="Version" text="3.6.0" />
+					<br/>
+          <Out head="language:" text="python" />
+          <Out head="version:" indent="1" text="3.6.0" />
         </Output>
         <Command input="python --version">
           <Output>Python 3.6.0</Output>
           <Command input="ec -r python" spinner timeout={300}>
             <Output>
-              <Out head="Language" text="python" />
-              <Select head="Mask">
+							<br/>
+              <Out head="language:" text="python" />
+              <Select head="mask:" indent="4">
                <Option value="3.x" />
                <Option value="2.x" selected>
-                 <Out head="Mask" text="2.x" />
-                 <Select head="Mask">
+                 <Out head="mask:" indent="4" text="2.x" />
+                 <Select head="version:" indent="4">
                   <Option value="2.7.13" />
                   <Option value="2.7.12" />
                   <Option value="2.7.11" />
                   <Option value="2.7.10" selected>
-                    <Out head="Version" text="2.7.10" style={{ marginBottom: '10px' }} />
+                    <Out head="version:" indent="1" text="2.7.10" />
                     <Output>
                       <Command input="python --version">
                         <Output>Python 2.7.10</Output>

@@ -11,23 +11,25 @@ const Ruby = () => (
       <Output>-bash: ruby: command not found</Output>
       <Command input="ec ruby@latest" spinner timeout={1000}>
         <Output>
-          <Out head="Language" text="ruby" />
-          <Out head="Version" text="2.5.0" />
+					<br/>
+          <Out head="language:" text="ruby" />
+          <Out head="version:" indent="1" text="2.5.0" />
         </Output>
         <Command input="ruby --version">
           <Output>ruby 2.5.0p0 (2017-12-25 revision 61468) [x86_64-darwin17]</Output>
           <Command input="ec -r ruby" spinner timeout={300}>
             <Output>
-              <Out head="Language" text="ruby" />
-              <Select head="Mask">
+							<br/>
+              <Out head="language:" text="ruby" />
+              <Select head="mask:" indent="4">
                <Option value="2.5.x" />
                <Option value="2.4.x" selected>
-                 <Out head="Mask" text="2.4.x" />
-                 <Select head="Version">
+                 <Out head="mask:" indent="4" text="2.4.x" />
+                 <Select head="version:" indent="1">
                   <Option value="2.4.3" />
                   <Option value="2.4.2" />
                   <Option value="2.4.1" selected>
-                    <Out head="Version" text="2.4.1" style={{ marginBottom: '10px' }} />
+                    <Out head="version:" indent="1" text="2.4.1" />
                     <Output>
                       <Command input="ruby --version">
                         <Output>

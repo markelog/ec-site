@@ -11,24 +11,26 @@ const Rust = () => (
       <Output>-bash: rustc: command not found</Output>
       <Command input="ec rust@latest" spinner timeout={1000}>
         <Output>
-          <Out head="Language" text="rust" />
-          <Out head="Version" text="1.23.0" />
+					<br/>
+          <Out head="language:" text="rust" />
+          <Out head="version:" indent="1" text="1.23.0" />
         </Output>
         <Command input="rustc --version">
           <Output>rustc 1.23.0 (766bd11c8 2018-01-01)</Output>
           <Command input="ec -r rust" spinner timeout={300}>
             <Output>
-              <Out head="Language" text="rust" />
-              <Select head="Mask">
+							<br/>
+              <Out head="language:" text="rust" />
+              <Select head="mask:" indent="4">
                 <Option value="1.x" selected>
-                  <Out head="Mask" text="1.x" />
-                  <Select head="Version">
+                  <Out head="mask:" indent="4" text="1.x" />
+                  <Select head="version:" indent="1">
                     <Option value="1.23.0" />
                     <Option value="1.22.1" />
                     <Option value="1.22.0" />
                     <Option value="1.21.0" />
                     <Option value="1.20.0" selected>
-                      <Out head="Version" text="1.2.0" />
+                      <Out head="version:" indent="1" text="1.20.0" />
                       <Output>
                         <Command input="rustc --version">
                           <Output>v1.20.0</Output>

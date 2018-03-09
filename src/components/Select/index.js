@@ -14,18 +14,25 @@ export default class Select extends React.Component {
     head: PropTypes.string,
   }
 
-  static pointer = (<span style={styles.pointer}>❯</span>)
+  static pointer = (<span>❯</span>)
 
   constructor(props) {
     super(props);
 
-    let { children } = props;
+    let { children, indent } = props;
     if (Array.isArray(children) === false) {
       children = props.children ? [props.children] : [];
     }
 
+		indent = +indent || 0;
+
     this.head = this.props.head;
     this.options = children.filter(({ type }) => type.displayName === 'Option');
+		this.nbsps = [];
+		for (let i = 0; i < +indent + 2; i++) {
+			this.nbsps.push(<i key={shortid()}>&nbsp;</i>)
+		}
+		this.nbspsPointer = this.nbsps.slice(0, -2);
 
     this.children = this.options
       .filter(elem => elem.props.selected)[0]
@@ -89,11 +96,14 @@ export default class Select extends React.Component {
   renderLi() {
     return this.options.map((elem, i) => {
       let data = elem.props.value;
+			let a = this.nbspsPointer
+			let b = this.nbsps
+			let q = this.props
 
       if (this.state.index === i) {
-        data = <span style={styles.active}>{Select.pointer} {data}</span>;
+        data = <span style={styles.active}>{this.nbspsPointer}{Select.pointer} {data}</span>;
       } else {
-        data = <span>{data}</span>;
+        data = <span>{this.nbsps}{data}</span>;
       }
 
       return (<li style={styles.li} key={shortid()}> {data} </li>);
@@ -103,7 +113,7 @@ export default class Select extends React.Component {
   renderUl() {
     return (
       <div>
-        <Out head={this.head} />
+        <Out indent={this.props.indent} head={this.head} />
         <ul style={styles.ul}>
           {this.renderLi()}
         </ul>

@@ -11,26 +11,28 @@ const Nodejs = () => (
       <Output>-bash: node: command not found</Output>
       <Command input="ec node@latest" spinner timeout={1000}>
         <Output>
-          <Out head="Language" text="node" />
-          <Out head="Version" text="9.3.0" />
+					<br/>
+          <Out head="language:" text="node" />
+          <Out head="version:" indent="1" text="9.8.0" />
         </Output>
         <Command input="node --version">
-          <Output>v9.3.0</Output>
+          <Output>v9.8.0</Output>
           <Command input="ec -r node" spinner timeout={300}>
             <Output>
-              <Out head="Language" text="node" />
-              <Select head="Mask">
+							<br/>
+              <Out head="language:" text="node" />
+              <Select head="mask:" indent="4">
                 <Option value="9.x" />
                 <Option value="8.x" />
                 <Option selected value="7.x">
-                  <Out head="Mask" text="7.x" />
-                  <Select head="Version">
+                  <Out head="mask:" indent="4" text="7.x" />
+                  <Select head="version:" indent="1">
                     <Option value="7.10.1" />
                     <Option value="7.10.0" />
                     <Option value="7.9.0" />
                     <Option value="7.8.0" />
                     <Option value="7.7.4" selected>
-                      <Out head="Version" text="7.7.4" />
+                      <Out head="version:" indent="1" text="7.7.4" />
                       <Output>
                         <Command input="node --version">
                           <Output>v7.7.4</Output>
