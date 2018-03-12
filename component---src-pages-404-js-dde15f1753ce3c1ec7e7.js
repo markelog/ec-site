@@ -1,0 +1,2 @@
+webpackJsonp([0x9427c64ab85d],{358:function(e,t,u){"use strict";function a(e){return e&&e.__esModule?e:{default:e}}t.__esModule=!0;var n=u(2),l=a(n),d=u(48),o=a(d),f=u(46),c=a(f),r=u(52),i=(a(r),u(47)),s=(a(i),function(e){var t=e.location.pathname.split("/").join(" ");return l.default.createElement(o.default,null,l.default.createElement(c.default,{input:t,delay:200},l.default.createElement(f.Output,null,"-bash: ",t,": command not found")))});t.default=s,e.exports=t.default}});
+//# sourceMappingURL=component---src-pages-404-js-dde15f1753ce3c1ec7e7.js.map
