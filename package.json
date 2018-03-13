@@ -6,9 +6,12 @@
   "license": "MIT",
   "scripts": {
     "start": "npm run develop",
-    "build": "gatsby build --prefix-paths",
+    "build:production": "TYPE=production gatsby build --prefix-paths",
+		"build:staging": "TYPE=staging gatsby build --prefix-paths",
     "develop": "gatsby develop",
-    "deploy": "npm run build && up && up url -o",
+    "deploy": "npm run deploy:staging",
+		"deploy:staging": "npm run build:staging && up && up url -o",
+		"deploy:production": "npm run build:production && up production && up url -o production",
     "lint": "eslint .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

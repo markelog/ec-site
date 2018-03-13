@@ -1,6 +1,8 @@
-const isProduction = process.env.NODE_ENV === 'production';
+const isStaging = process.env.TYPE === 'staging';
 
 const config = {
+	pathPrefix: isStaging ? '/staging/' : '/',
+
   siteMetadata: {
     title: 'Eclectic language version manager',
   },
@@ -50,9 +52,5 @@ const config = {
     }
   ],
 };
-
-if (isProduction) {
-  config.pathPrefix = '/staging/';
-}
 
 module.exports = config;

@@ -4,8 +4,19 @@
   "static": {
     "dir": "public"
   },
+	"stages": {
+    "production": {
+      "domain": "eclectica.sh"
+    }
+  },
+	"redirects": {
+    "/*": {
+      "location": "/",
+      "status": 200
+    }
+  },
 	"error_pages": {
     "dir": "public"
   },
-  "regions": ["eu-west-2"]
+  "regions": ["eu-west-3"]
 }
