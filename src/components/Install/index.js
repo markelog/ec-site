@@ -31,7 +31,7 @@ class Install extends React.Component {
     return (
       <div>
         <section style={styles.paper}>
-          {'$ wget -qO - https://raw.githubusercontent.com/markelog/ec-install/master/scripts/install.sh | sh'}
+          {'$ wget -qO - https://raw.githubusercontent.com/markelog/ec-install/master/scripts/wget-install.sh | sh'}
         </section>
 
         <p style={styles.para}>
@@ -41,7 +41,7 @@ class Install extends React.Component {
         </p>
 
         <section style={styles.paper}>
-          {'$ wget -qO - https://raw.githubusercontent.com/markelog/ec-install/master/scripts/install.sh | sudo sh'}
+          {'$ wget -qO - https://raw.githubusercontent.com/markelog/ec-install/master/scripts/wget-install.sh | sudo sh'}
         </section>
 
         <p style={styles.para}>
