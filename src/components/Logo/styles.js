@@ -39,16 +39,38 @@ const styles = {
 
   link: `
     margin: 0;
-  width: 80vh;
+  	width: 80vh;
     display: inline-block;
 
-  @media (max-width: 667px) {
-   width: 70vh;
-  }
+		@media only screen
+		  and (min-device-width: 360px) {
+				width: 40vh;
+		}
 
-  @media (max-width: 450px) {
-   width: 50vh;
-  }
+		/* iPhone X portrait */
+		@media only screen
+		  and (min-device-width: 375px)
+		  and (max-device-width: 812px)
+		  and (orientation: portrait) {
+				width: 40vh
+		}
+
+		/* iPhone X landscape */
+		@media only screen
+		  and (min-device-width: 375px)
+		  and (max-device-width: 812px)
+		  and (orientation: landscape) {
+				width: 100vh
+		}
+
+		/* iPad Pro 10.5 Portrait */
+		@media only screen
+			and (min-device-width: 834px)
+			and (max-device-width: 834px)
+			and (orientation: portrait)
+			and (-webkit-min-device-pixel-ratio: 2) {
+				width: 70vh
+		}
   `,
 
   install: {
@@ -77,25 +99,42 @@ const styles = {
     display: block !important;
     animation: ${fadein} 3s forwards, ${slide} 3s forwards;
 
-    @media (max-width: 865px) {
-     font-size: 3rem;
-    }
+		@media only screen
+		  and (min-device-width: 360px) {
+				font-size: 1.1rem;
+		}
 
-    @media (max-width: 865px) {
-     font-size: 3rem;
-    }
+		/* iPhone X portrait */
+		@media only screen
+			and (min-device-width: 375px)
+			and (max-device-width: 812px)
+			 {
+				font-size: 1.2rem;
+		}
 
-    @media (max-width: 650px) {
-     font-size: 2.5rem;
-    }
+		/* iPhone X landscape */
+		@media only screen
+			and (min-device-width: 375px)
+			and (max-device-width: 812px)
+			 {
+				font-size: 2rem;
+		}
 
-    @media (max-width: 520px) {
-     font-size: 2rem;
-    }
+		/* iPad Pro 10.5 Portrait */
+		@media only screen
+			and (min-device-width: 834px)
+			and (max-device-width: 834px)
+			and (orientation: portrait)
+			{
+				font-size: 3rem;
+				margin-top: 10rem;
+		}
 
-    @media (max-width: 450px) {
-     font-size: 1.5rem;
-    }
+		@media screen
+		  and (device-width: 320px)
+		  and (device-height: 640px) {
+				border:1px solid red;
+		}
   `,
 };
 
