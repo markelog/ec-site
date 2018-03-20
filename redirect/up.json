@@ -1,0 +1,8 @@
+{
+  "name": "redirect-eclectica",
+  "stages": {
+    "production": {
+      "domain": "www.eclectica.sh"
+    }
+  }
+}
