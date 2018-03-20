@@ -43,7 +43,7 @@ const styles = {
     display: inline-block;
 
 		@media only screen
-		  and (min-device-width: 360px) {
+		  and (max-device-width: 760px) {
 				width: 40vh;
 		}
 
@@ -100,7 +100,7 @@ const styles = {
     animation: ${fadein} 3s forwards, ${slide} 3s forwards;
 
 		@media only screen
-		  and (min-device-width: 360px) {
+		  and (max-device-width: 760px) {
 				font-size: 1.1rem;
 		}
 
@@ -120,21 +120,7 @@ const styles = {
 				font-size: 2rem;
 		}
 
-		/* iPad Pro 10.5 Portrait */
-		@media only screen
-			and (min-device-width: 834px)
-			and (max-device-width: 834px)
-			and (orientation: portrait)
-			{
-				font-size: 3rem;
-				margin-top: 10rem;
-		}
 
-		@media screen
-		  and (device-width: 320px)
-		  and (device-height: 640px) {
-				border:1px solid red;
-		}
   `,
 };
 
