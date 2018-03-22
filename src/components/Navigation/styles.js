@@ -3,8 +3,9 @@ import { minWidth } from '../../variables/dimensions';
 
 export default {
   ul: `
+		font-size: 3.5vw;
     position: absolute;
-    bottom: 100px;
+    bottom: 8vh;
     display: flex;
     justify-content: space-around;
     min-width: ${minWidth};
@@ -12,31 +13,27 @@ export default {
     margin: 0;
 		padding: 0;
 
-    @media (max-width: 500px) {
+    @media (max-width: 600px) {
       flex-direction: column;
       left: 50%;
       transform: translateX(-10%);
       width: auto;
       padding: 3rem 0;
-			bottom: 2rem;
+			bottom: 10vh;
+			font-size: 5vw;
     }
 
-		/* iPhone X portrait */
-		@media only screen
-			and (min-device-width: 375px)
-			and (max-device-width: 812px)
-			and (-webkit-min-device-pixel-ratio: 3)
-			and (orientation: portrait) {
-				bottom: 6rem
+		@media (max-height: 1000px) and
+		(max-width: 3000px) {
+			bottom: 10vh;
 		}
 
-		/* iPhone 6+, 7+ and 8+ */
-		@media only screen
-		  and (min-device-width: 414px)
-		  and (max-device-width: 736px)
-		  and (-webkit-min-device-pixel-ratio: 3)
-		  and (orientation: portrait) {
-				bottom: 4rem
+		@media (max-height: 800px) {
+			bottom: 16vh;
+		}
+
+		@media (max-height: 600px) {
+			bottom: 10vh;
 		}
   `,
 
@@ -51,13 +48,8 @@ export default {
       color: ${dark} !important;
     }
 
-    font-size: 3.5vw;
     text-decoration: none;
     color: white;
-
-    @media (max-width: 650px) {
-      font-size: 1.5rem;
-    }
   `,
 
   active: {

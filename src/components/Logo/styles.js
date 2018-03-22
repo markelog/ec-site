@@ -39,38 +39,8 @@ const styles = {
 
   link: `
     margin: 0;
-  	width: 80vh;
+  	width: 50vw;
     display: inline-block;
-
-		@media only screen
-		  and (max-device-width: 760px) {
-				width: 40vh;
-		}
-
-		/* iPhone X portrait */
-		@media only screen
-		  and (min-device-width: 375px)
-		  and (max-device-width: 812px)
-		  and (orientation: portrait) {
-				width: 40vh
-		}
-
-		/* iPhone X landscape */
-		@media only screen
-		  and (min-device-width: 375px)
-		  and (max-device-width: 812px)
-		  and (orientation: landscape) {
-				width: 100vh
-		}
-
-		/* iPad Pro 10.5 Portrait */
-		@media only screen
-			and (min-device-width: 834px)
-			and (max-device-width: 834px)
-			and (orientation: portrait)
-			and (-webkit-min-device-pixel-ratio: 2) {
-				width: 70vh
-		}
   `,
 
   install: {
@@ -90,7 +60,7 @@ const styles = {
   `,
 
   sub: `
-    font-size: 4rem;
+    font-size: 5vw;
     white-space: nowrap;
     font-weight: 400;
     letter-spacing: 2px;
@@ -98,29 +68,6 @@ const styles = {
     margin: 5rem 0 0;
     display: block !important;
     animation: ${fadein} 3s forwards, ${slide} 3s forwards;
-
-		@media only screen
-		  and (max-device-width: 760px) {
-				font-size: 1.1rem;
-		}
-
-		/* iPhone X portrait */
-		@media only screen
-			and (min-device-width: 375px)
-			and (max-device-width: 812px)
-			 {
-				font-size: 1.2rem;
-		}
-
-		/* iPhone X landscape */
-		@media only screen
-			and (min-device-width: 375px)
-			and (max-device-width: 812px)
-			 {
-				font-size: 2rem;
-		}
-
-
   `,
 };
 
