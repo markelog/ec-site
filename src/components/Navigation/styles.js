@@ -1,39 +1,53 @@
 import { dark } from '../../variables/colors';
 import { minWidth } from '../../variables/dimensions';
 
+const column = `
+	flex-direction: column;
+	left: 50%;
+	transform: translateX(-10%);
+	width: auto;
+	padding: 3rem 0;
+	bottom: 10vh;
+	font-size: 5vw;
+`;
+
+const row = `
+	font-size: 3.5vw;
+	position: absolute;
+	bottom: 10vh;
+	display: flex;
+	justify-content: space-around;
+	min-width: ${minWidth};
+	width: 100%;
+	margin: 0;
+	padding: 0;
+`
+
 export default {
   ul: `
-		font-size: 3.5vw;
-    position: absolute;
-    bottom: 8vh;
-    display: flex;
-    justify-content: space-around;
-    min-width: ${minWidth};
-    width: 100%;
-    margin: 0;
-		padding: 0;
+		${row}
 
-    @media (max-width: 600px) {
-      flex-direction: column;
-      left: 50%;
-      transform: translateX(-10%);
-      width: auto;
-      padding: 3rem 0;
-			bottom: 10vh;
-			font-size: 5vw;
-    }
+		@media only screen
+		and (min-device-width : 375px)
+		and (max-device-width : 667px)
+		and (orientation : portrait) {
+      ${column}
 
-		@media (max-height: 1000px) and
-		(max-width: 3000px) {
-			bottom: 10vh;
 		}
 
-		@media (max-height: 800px) {
-			bottom: 16vh;
+		@media only screen
+		and (min-device-width : 375px)
+		and (max-device-width : 812px)
+		and (-webkit-device-pixel-ratio : 3)
+		and (orientation : portrait) {
+			bottom: 20vh;
 		}
 
-		@media (max-height: 600px) {
-			bottom: 10vh;
+		@media only screen
+		and (min-device-width : 768px)
+		and (max-device-width : 1024px)
+		and (orientation : portrait) {
+			${column}
 		}
   `,
 

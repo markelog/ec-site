@@ -12,6 +12,7 @@
     "deploy": "npm run deploy:staging",
     "deploy:staging": "npm run build:staging && up && up url -o",
     "deploy:production": "npm run build:production && up production && up url -o production",
+		"deploy:everything": "npm run deploy:staging && npm run deploy:production",
     "lint": "eslint .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
