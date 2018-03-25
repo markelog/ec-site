@@ -12,7 +12,7 @@
     "deploy": "npm run deploy:staging",
     "deploy:staging": "npm run build:staging && up && up url -o",
     "deploy:production": "npm run build:production && up production && up url -o production",
-		"deploy:everything": "npm run deploy:staging && npm run deploy:production",
+    "deploy:everything": "npm run deploy:staging && npm run deploy:production",
     "lint": "eslint .",
     "test": "npm run lint"
   },
@@ -24,6 +24,7 @@
     "gatsby-plugin-google-analytics": "^1.0.19",
     "gatsby-plugin-react-helmet": "^1.0.8",
     "gatsby-plugin-sharp": "^1.6.24",
+    "gatsby-plugin-sitemap": "^1.2.20",
     "gatsby-plugin-styled-components": "^2.0.5",
     "gatsby-source-filesystem": "^1.5.11",
     "gatsby-transformer-sharp": "^1.6.16",
