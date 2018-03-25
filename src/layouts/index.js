@@ -5,6 +5,7 @@ import Helmet from 'react-helmet';
 import { MuiThemeProvider, createMuiTheme } from 'material-ui/styles';
 
 import 'normalize.css';
+import '../components/roboto/roboto.css';
 import '../components/general/general.css';
 
 import Header from '../components/Header';

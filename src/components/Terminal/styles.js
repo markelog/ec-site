@@ -1,5 +1,3 @@
-import 'typeface-roboto/index.css';
-
 import { keyframes } from 'styled-components';
 
 import { grey, dark } from '../../variables/colors';
