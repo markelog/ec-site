@@ -39,7 +39,7 @@ const styles = {
 
   link: `
     margin: 0;
-  	width: 50vw;
+    width: 50vw;
     display: inline-block;
   `,
 

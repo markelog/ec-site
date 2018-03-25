@@ -11,7 +11,7 @@ const Go = () => (
       <Output>-bash: go: command not found</Output>
       <Command input="ec go@latest" spinner timeout={1000}>
         <Output>
-					<br/>
+          <br />
           <Out head="language:" text="go" />
           <Out head="version:" indent="1" text="1.10.0" />
         </Output>
@@ -19,7 +19,7 @@ const Go = () => (
           <Output>go version go1.10beta1 darwin/amd64</Output>
           <Command input="ec -r go" spinner timeout={300}>
             <Output>
-							<br/>
+              <br />
               <Out head="language:" text="go" />
               <Select head="mask:" indent="4">
                 <Option value="1.10.x" />

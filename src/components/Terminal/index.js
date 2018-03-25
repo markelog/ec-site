@@ -3,13 +3,13 @@ import PropTypes from 'prop-types';
 
 import styles from './styles';
 
-const Terminal = props => {
-	const attrs = Object.assign({}, props)
-	attrs.style = {
-		...styles.window, ...attrs.style
-	};
+const Terminal = (props) => {
+  const attrs = Object.assign({}, props);
+  attrs.style = {
+    ...styles.window, ...attrs.style
+  };
 
-	return (<section {...attrs}>
+  return (<section {...attrs}>
     <div style={styles.header}>
       <span style={styles.close} />
       <span style={styles.minimize} />
@@ -21,7 +21,7 @@ const Terminal = props => {
         {props.children}
       </div>
     </div>
-  </section>)
+          </section>);
 };
 
 Terminal.propTypes = {

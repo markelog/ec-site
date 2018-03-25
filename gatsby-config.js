@@ -1,7 +1,7 @@
 const isStaging = process.env.TYPE === 'staging';
 
 const config = {
-	pathPrefix: isStaging ? '/staging/' : '/',
+  pathPrefix: isStaging ? '/staging/' : '/',
 
   siteMetadata: {
     title: 'Eclectic language version manager',

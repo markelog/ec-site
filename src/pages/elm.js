@@ -11,7 +11,7 @@ const Elm = () => (
       <Output>-bash: elm: command not found</Output>
       <Command input="ec elm@latest" spinner timeout={300}>
         <Output>
-					<br/>
+          <br />
           <Out head="language:" text="elm" />
           <Out indent="1" head="version:" text="0.18.0" />
         </Output>
@@ -19,7 +19,7 @@ const Elm = () => (
           <Output>0.18.0</Output>
           <Command input="ec -r elm" spinner timeout={1000}>
             <Output>
-							<br/>
+              <br />
               <Out head="language:" text="elm" />
               <Select indent="4" head="mask:">
                <Option value="0.18.x" />

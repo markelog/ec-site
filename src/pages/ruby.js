@@ -11,7 +11,7 @@ const Ruby = () => (
       <Output>-bash: ruby: command not found</Output>
       <Command input="ec ruby@latest" spinner timeout={1000}>
         <Output>
-					<br/>
+          <br />
           <Out head="language:" text="ruby" />
           <Out head="version:" indent="1" text="2.5.0" />
         </Output>
@@ -19,7 +19,7 @@ const Ruby = () => (
           <Output>ruby 2.5.0p0 (2017-12-25 revision 61468) [x86_64-darwin17]</Output>
           <Command input="ec -r ruby" spinner timeout={300}>
             <Output>
-							<br/>
+              <br />
               <Out head="language:" text="ruby" />
               <Select head="mask:" indent="4">
                <Option value="2.5.x" />

@@ -11,6 +11,7 @@ export { default as Option } from './Option';
 export default class Select extends React.Component {
   static propTypes = {
     children: PropTypes.node.isRequired,
+    indent: PropTypes.string,
     head: PropTypes.string,
   }
 
@@ -24,15 +25,15 @@ export default class Select extends React.Component {
       children = props.children ? [props.children] : [];
     }
 
-		indent = +indent || 0;
+    indent = +indent || 0;
 
     this.head = this.props.head;
     this.options = children.filter(({ type }) => type.displayName === 'Option');
-		this.nbsps = [];
-		for (let i = 0; i < +indent + 2; i++) {
-			this.nbsps.push(<i key={shortid()}>&nbsp;</i>)
-		}
-		this.nbspsPointer = this.nbsps.slice(0, -2);
+    this.nbsps = [];
+    for (let i = 0; i < +indent + 2; i++) {
+      this.nbsps.push(<i key={shortid()}>&nbsp;</i>);
+    }
+    this.nbspsPointer = this.nbsps.slice(0, -2);
 
     this.children = this.options
       .filter(elem => elem.props.selected)[0]
@@ -96,9 +97,6 @@ export default class Select extends React.Component {
   renderLi() {
     return this.options.map((elem, i) => {
       let data = elem.props.value;
-			let a = this.nbspsPointer
-			let b = this.nbsps
-			let q = this.props
 
       if (this.state.index === i) {
         data = <span style={styles.active}>{this.nbspsPointer}{Select.pointer} {data}</span>;
