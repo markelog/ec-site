@@ -1,30 +1,4 @@
-import { keyframes } from 'styled-components';
-
 import { white } from '../../variables/colors';
-
-const fadein = keyframes`
-{
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-`;
-
-const slide = keyframes`
-{
-  from {
-    transform: translateY(-45px);
-  }
-
-  to {
-    transform: translateY(0);
-  }
-}
-`;
 
 const styles = {
   container: {
@@ -57,17 +31,6 @@ const styles = {
     padding: 0;
     width: 100%;
     height: 100%;
-  `,
-
-  sub: `
-    font-size: 5vw;
-    white-space: nowrap;
-    font-weight: 400;
-    letter-spacing: 2px;
-    color: dark;
-    margin: 5rem 0 0;
-    display: block !important;
-    animation: ${fadein} 3s forwards, ${slide} 3s forwards;
   `,
 };
 
